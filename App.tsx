@@ -28,8 +28,8 @@ const App: React.FC = () => {
       </header>
 
       {/* Main Single Paper Container */}
-      <main 
-        className="max-w-5xl mx-auto paper-texture custom-shadow relative animate-float"
+      <main
+        className="max-w-5xl mx-auto paper-texture custom-shadow relative "
         style={{
           transform: `translateY(${scrolled * -0.05}px)`
         }}
@@ -62,7 +62,7 @@ const App: React.FC = () => {
           COORD: 37.7749° N, 122.4194° W
         </div>
       </div>
-      
+
       <div className="fixed bottom-8 right-8 hidden lg:block opacity-30">
         <div className="font-mono text-[10px] text-white uppercase tracking-widest">
           EST. MAR 2026 / ID-4882

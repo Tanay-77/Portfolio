@@ -14,13 +14,13 @@ const Hero: React.FC = () => {
               Tanay <br /> Mahajan
             </h1>
           </div>
-          
+
           <div className="space-y-4">
             <h2 className="text-xl md:text-2xl font-bold text-gray-800 tracking-tight">
-              UI/UX Designer & Developer
+              Developer & Designer
             </h2>
             <p className="max-w-md text-gray-600 leading-relaxed font-medium">
-              Independent designer crafting user-centric digital experiences. Focused on bridging the gap between aesthetics and functionality for modern brands.
+              Independent developer crafting user-centric digital experiences. Focused on bridging the gap between aesthetics and functionality for modern brands.
             </p>
           </div>
 
@@ -34,14 +34,14 @@ const Hero: React.FC = () => {
           <Tape orientation="diagonal-left" className="-top-4 -left-8" />
           <div className="relative bg-white p-4 pb-12 custom-shadow rotate-2 group-hover:rotate-0 transition-transform duration-500 max-w-[280px]">
             <div className="overflow-hidden bg-gray-100 aspect-square grayscale contrast-125 mb-4">
-              <img 
-                src="https://picsum.photos/seed/person/500/500" 
-                alt="Tanay Mahajan" 
+              <img
+                src="/profile.jpg"
+                alt="Tanay Mahajan"
                 className="w-full h-full object-cover mix-blend-multiply opacity-90"
               />
             </div>
             <div className="text-center">
-              <span className="font-mono text-[10px] text-gray-400 uppercase tracking-widest block mb-1">DESIGNER + CODER</span>
+              <span className="font-mono text-[10px] text-gray-400 uppercase tracking-widest block mb-1">DEVELOPER + DESIGNER</span>
               <span className="font-bold text-sm tracking-tight">IDENTITY.001</span>
             </div>
             <Paperclip className="-top-12 -right-4 z-20" />

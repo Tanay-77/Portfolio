@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
       <div className="flex flex-col md:flex-row items-start justify-between gap-12">
         <div className="flex-1 space-y-6">
           <div className="space-y-1">
-            <span className="font-mono text-xs text-gray-400 block tracking-widest">HUMAN NAME:</span>
+            <span className="font-mono text-xs text-gray-400 block tracking-widest">NAME:</span>
             <h1 className="text-6xl md:text-8xl font-black text-black leading-none uppercase tracking-tighter">
               Tanay <br /> Mahajan
             </h1>

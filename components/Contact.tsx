@@ -2,14 +2,14 @@ import React from 'react';
 
 const Contact: React.FC = () => {
   return (
-    <section className="px-8 py-24 bg-[#F4F1EA]">
+    <section className="px-8 py-24">
       <div className="max-w-5xl mx-auto">
         <div className="mb-16 space-y-4">
           <h3 className="font-black text-3xl uppercase tracking-tighter">Contact</h3>
           <p className="text-gray-500 text-lg">Let’s build something great together.</p>
         </div>
 
-        <div className="bg-white rounded-2xl p-8 md:p-12 border border-gray-200 max-w-3xl">
+        <div className="bg-[#F4F1EA] rounded-2xl p-8 md:p-12 border border-gray-200 max-w-3xl">
           <p className="text-gray-600 mb-8 text-lg font-medium">
             prefer dms? reach me on x (twitter) i’m quick to respond.
           </p>

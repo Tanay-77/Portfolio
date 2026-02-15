@@ -10,7 +10,7 @@ export const PROJECTS: Project[] = [
     link: "#",
     liveLink: "https://devbuilder.netlify.app/",
     githubLink: "https://github.com/Tanay-77/DevBuilder",
-    techStack: ["React", "TypeScript", "Tailwind"],
+    techStack: ["React", "TypeScript", "Node.js", "Tailwind"],
     image: "https://picsum.photos/seed/mcd/600/400"
   },
   {
@@ -21,7 +21,7 @@ export const PROJECTS: Project[] = [
     link: "#",
     liveLink: "https://ratemyteam.netlify.app/",
     githubLink: "https://github.com/Tanay-77/Team-Ratings",
-    techStack: ["React", "TypeScript", "Tailwind"],
+    techStack: ["React", "TypeScript", "Node.js", "Tailwind"],
     image: "https://picsum.photos/seed/spotify/600/400"
   },
   {
@@ -83,10 +83,10 @@ export const EXPERIENCE: ExperienceItem[] = [
 ];
 
 export const GALLERY: GalleryItem[] = [
-  { id: 'g1', title: 'App UI Screen', image: 'https://picsum.photos/seed/ui1/400/500', rotation: -2 },
-  { id: 'g2', title: 'Flyer Design', image: 'https://picsum.photos/seed/flyer1/400/400', rotation: 3 },
-  { id: 'g3', title: 'Wireframe Mockup', image: 'https://picsum.photos/seed/wire1/500/400', rotation: -1 },
-  { id: 'g4', title: 'Brand Identity', image: 'https://picsum.photos/seed/brand1/400/600', rotation: 2 },
-  { id: 'g5', title: 'Typography Study', image: 'https://picsum.photos/seed/typo1/500/500', rotation: -3 },
-  { id: 'g6', title: 'Web Concept', image: 'https://picsum.photos/seed/web1/400/400', rotation: 1 },
+  { id: 'g1', title: 'App UI Screen', image: 'https://pbs.twimg.com/media/HAaRgndXIAE__Uj?format=png&name=900x900', rotation: -2, link: 'https://x.com/TanayMahaj7/status/2022369639507124448' },
+  { id: 'g2', title: 'Flyer Design', image: 'https://pbs.twimg.com/media/HAKek7YakAAWBhz?format=jpg&name=large', rotation: 3, link: 'https://x.com/TanayMahaj7/status/2018351283535778172' },
+  { id: 'g3', title: 'Wireframe Mockup', image: './public/car.png', rotation: -1, link: 'https://ride-x-dashboard.vercel.app/' },
+  { id: 'g4', title: 'Brand Identity', image: './public/land3.png', rotation: 2, link: 'https://x.com/TanayMahaj7/status/2000616085008359665' },
+  { id: 'g5', title: 'Typography Study', image: './public/land1.png', rotation: -3, link: 'https://www.behance.net/gallery/240443265/Redesigned-Zudios-Hero-Page' },
+  { id: 'g6', title: 'Web Concept', image: './public/land2.png', rotation: 1, link: 'https://www.behance.net/gallery/240207133/Hero-Page-Design' },
 ];

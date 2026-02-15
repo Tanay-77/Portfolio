@@ -16,6 +16,7 @@ export interface GalleryItem {
   title: string;
   image: string;
   rotation: number;
+  link?: string;
 }
 
 export interface ExperienceItem {

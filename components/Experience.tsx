@@ -39,11 +39,7 @@ const Experience: React.FC = () => {
       </div>
 
       {/* Decorative dots grid */}
-      <div className="absolute right-8 bottom-8 w-24 h-24 grid grid-cols-4 gap-4 opacity-20 pointer-events-none">
-        {[...Array(16)].map((_, i) => (
-          <div key={i} className="w-1 h-1 rounded-full bg-black"></div>
-        ))}
-      </div>
+
     </section>
   );
 };

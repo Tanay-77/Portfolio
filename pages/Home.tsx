@@ -20,7 +20,7 @@ const Home: React.FC = () => {
     return (
         <div className="min-h-screen grid-bg py-20 px-4 md:px-8">
             {/* Navigation Label */}
-            <header className="fixed top-8 left-8 z-50 mix-blend-difference hidden md:block">
+            <header className="fixed top-8 left-8 z-50 mix-blend-difference block">
                 <h1 className="font-mono text-xs text-white uppercase tracking-[0.5em] font-black">
                     PORTFOLIO v.26
                 </h1>

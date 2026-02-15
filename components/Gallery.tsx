@@ -1,44 +1,49 @@
-
 import React from 'react';
 import { GALLERY } from '../constants';
-import Tape from './Tape';
+import { useNavigate } from 'react-router-dom';
 
-const Gallery: React.FC = () => {
+interface GalleryProps {
+  isPreview?: boolean;
+}
+
+const Gallery: React.FC<GalleryProps> = ({ isPreview = false }) => {
+  const navigate = useNavigate();
+  const displayItems = isPreview ? GALLERY.slice(0, 5) : GALLERY;
+
   return (
-    <section className="px-8 py-16 border-b border-gray-200">
-      <div className="flex items-center gap-4 mb-12">
-        <h3 className="font-black text-3xl uppercase tracking-tighter">Gallery</h3>
-        <div className="flex-1 h-[1px] bg-gray-200"></div>
-        <span className="font-mono text-xs text-gray-400">ARCHIVE_SNAP</span>
+    <section className="px-8 py-16 border-b border-gray-200" id="gallery">
+      <div className="mb-12 space-y-2">
+        <h3 className="font-serif text-4xl text-gray-900 leading-tight">Gallery</h3>
+        <p className="text-gray-500 text-lg">I Copy designs and code them in free time</p>
+        {!isPreview && (
+          <p className="text-gray-400 text-sm mt-8">Note: Some of these designs are not by me but coded by me.</p>
+        )}
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 py-8">
-        {GALLERY.map((item, idx) => (
-          <div 
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {displayItems.map((item) => (
+          <div
             key={item.id}
-            className="relative group cursor-zoom-in"
-            style={{ 
-              transform: `rotate(${item.rotation}deg)`,
-              zIndex: 10 + idx
-            }}
+            className="group relative overflow-hidden rounded-[2rem] bg-gray-100"
           >
-            {/* Random Tape piece for every other item */}
-            {idx % 2 === 0 && <Tape orientation="diagonal-right" className="-top-4 -right-4" />}
-            
-            <div className="bg-white p-3 pb-8 custom-shadow transition-all duration-500 group-hover:rotate-0 group-hover:scale-105 group-hover:z-50">
-              <div className="bg-gray-100 aspect-[4/5] overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
-                <img 
-                  src={item.image} 
-                  alt={item.title} 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="mt-4 text-center">
-                <span className="font-mono text-[9px] text-gray-400 block tracking-[0.2em] uppercase">{item.title}</span>
-              </div>
+            <div className="aspect-[4/3] overflow-hidden">
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
             </div>
           </div>
         ))}
+
+        {isPreview && (
+          <div className="relative overflow-hidden rounded-[2rem] bg-gray-100 aspect-[4/3] flex items-center justify-center group cursor-pointer" onClick={() => navigate('/gallery')}>
+            <div className="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 opacity-50"></div>
+            <button className="relative px-8 py-3 bg-black text-white rounded-full font-bold text-lg shadow-lg transform transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl hover:bg-gray-800 border border-transparent hover:border-black">
+              View More
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

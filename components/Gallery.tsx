@@ -14,7 +14,7 @@ const Gallery: React.FC<GalleryProps> = ({ isPreview = false }) => {
     <section className="px-8 py-16 border-b border-gray-200" id="gallery">
       <div className="mb-12 space-y-2">
         <h3 className="font-black text-3xl uppercase tracking-tighter">Gallery</h3>
-        <p className="text-gray-500 text-lg">I Copy designs and code them in free time</p>
+        <p className="text-gray-600  font-medium">I Copy designs and code them in free time</p>
         {!isPreview && (
           <p className="text-gray-400 text-sm mt-8">Note: Some of these designs are not by me but coded by me.</p>
         )}

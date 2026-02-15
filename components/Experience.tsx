@@ -13,22 +13,22 @@ const Experience: React.FC = () => {
 
       <div className="space-y-12 max-w-2xl relative">
         <div className="absolute left-0 top-2 bottom-2 w-px bg-gray-200"></div>
-        
+
         {EXPERIENCE.map((exp) => (
           <div key={exp.id} className="pl-8 relative group">
             {/* Dot indicator */}
             <div className="absolute left-[-4px] top-2 w-2 h-2 rounded-full bg-gray-300 group-hover:bg-black transition-colors"></div>
-            
+
             <div className="space-y-3">
               <div className="flex items-center justify-between">
-                <h4 className="text-xl font-black uppercase tracking-tight">{exp.role}</h4>
+                <h4 className="text-xl font-black uppercase">{exp.role}</h4>
                 <span className="font-mono text-[10px] text-gray-500 font-bold">{exp.period}</span>
               </div>
-              
+
               <ul className="space-y-2">
                 {exp.description.map((item, idx) => (
                   <li key={idx} className="text-sm text-gray-600 flex items-start gap-3">
-                    <span className="text-gray-300 font-mono mt-1 text-[10px]">#0{idx+1}</span>
+                    <span className="text-gray-300 font-mono mt-1 text-[10px]">#0{idx + 1}</span>
                     <span>{item}</span>
                   </li>
                 ))}

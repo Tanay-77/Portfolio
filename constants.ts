@@ -65,7 +65,7 @@ export const PROJECTS: Project[] = [
     link: "#",
     liveLink: "https://valorant-inspired.netlify.app/",
     githubLink: "https://github.com/Tanay-77/valorant-inspired",
-    techStack: ["React", "TypeScript", "Tailwind"],
+    techStack: ["React", "Tailwind", "GSAP"],
     image: "https://picsum.photos/seed/dev/600/400"
   }
 ];
@@ -73,23 +73,13 @@ export const PROJECTS: Project[] = [
 export const EXPERIENCE: ExperienceItem[] = [
   {
     id: 'exp1',
-    role: "Freelance UI Designer",
+    role: "Freelancing",
     period: "2024 – Present",
     description: [
-      "Designed social media creatives & event flyers for major campus events.",
-      "Developed high-fidelity mobile app concepts in Figma for local startups.",
-      "Collaborated with small local businesses to establish digital brand identities."
-    ]
-  },
-  {
-    id: 'exp2',
-    role: "UX Design Intern",
-    period: "Summer 2023",
-    description: [
-      "Assisted in user research and wireframing for an e-commerce platform.",
-      "Created design system documentation used by the development team."
+      "UI/UX Designer + Full Stack Developer"
     ]
   }
+
 ];
 
 export const GALLERY: GalleryItem[] = [

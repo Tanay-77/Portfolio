@@ -55,6 +55,18 @@ const Projects: React.FC = () => {
                 <p className="text-sm text-gray-600 line-clamp-2 font-medium leading-relaxed">
                   {project.description}
                 </p>
+                {project.techStack && (
+                  <div className="flex flex-wrap gap-2 pt-2">
+                    {project.techStack.map((tech, index) => (
+                      <span
+                        key={index}
+                        className="text-[10px] font-mono font-bold uppercase px-2 py-1 bg-gray-200 text-gray-600 rounded-md tracking-wider"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           </div>

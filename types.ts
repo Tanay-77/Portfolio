@@ -8,6 +8,7 @@ export interface Project {
   image: string;
   liveLink?: string;
   githubLink?: string;
+  techStack?: string[];
 }
 
 export interface GalleryItem {

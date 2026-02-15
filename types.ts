@@ -6,6 +6,8 @@ export interface Project {
   description: string;
   link: string;
   image: string;
+  liveLink?: string;
+  githubLink?: string;
 }
 
 export interface GalleryItem {

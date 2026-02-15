@@ -8,6 +8,8 @@ export const PROJECTS: Project[] = [
     category: "App Design / Case Study",
     description: "Streamlining the mobile ordering experience for 10M+ daily users with a focus on intuitive rewards tracking.",
     link: "#",
+    liveLink: "#",
+    githubLink: "#",
     image: "https://picsum.photos/seed/mcd/600/400"
   },
   {
@@ -16,6 +18,8 @@ export const PROJECTS: Project[] = [
     category: "UX Research / Web Design",
     description: "Enhancing the desktop experience by integrating real-time collaborative listening parties and group chats.",
     link: "#",
+    liveLink: "#",
+    githubLink: "#",
     image: "https://picsum.photos/seed/spotify/600/400"
   },
   {
@@ -24,6 +28,8 @@ export const PROJECTS: Project[] = [
     category: "Product Design",
     description: "A smart platform that uses LLMs to optimize resume content for specific job descriptions.",
     link: "#",
+    liveLink: "#",
+    githubLink: "#",
     image: "https://picsum.photos/seed/ai/600/400"
   },
   {
@@ -32,6 +38,8 @@ export const PROJECTS: Project[] = [
     category: "UI Design",
     description: "A comprehensive design system and component library for rapid React application development.",
     link: "#",
+    liveLink: "#",
+    githubLink: "#",
     image: "https://picsum.photos/seed/dev/600/400"
   }
 ];

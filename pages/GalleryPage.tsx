@@ -23,7 +23,7 @@ const GalleryPage: React.FC = () => {
                     </svg>
                 </button>
                 <h1 className="font-mono text-xs text-white uppercase tracking-[0.5em] font-black">
-                    LINKBOARD / PORTFOLIO v.26
+                    PORTFOLIO v.26
                 </h1>
             </header>
 

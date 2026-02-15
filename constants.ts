@@ -26,12 +26,12 @@ export const PROJECTS: Project[] = [
   },
   {
     id: '3',
-    title: "Techgen",
+    title: "Bird",
     category: "Landing Page",
-    description: "A landing page for a solar company.",
+    description: "A landing page for a venture capital firm.",
     link: "#",
-    liveLink: "https://techgenn.netlify.app/",
-    githubLink: "https://github.com/Tanay-77/techgen",
+    liveLink: "https://bird-venture-capital.netlify.app/",
+    githubLink: "https://github.com/Tanay-77/bird-venture-capital",
     techStack: ["React", "TypeScript", "Tailwind"],
     image: "https://picsum.photos/seed/ai/600/400"
   },

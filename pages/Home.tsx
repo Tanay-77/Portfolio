@@ -22,7 +22,7 @@ const Home: React.FC = () => {
             {/* Navigation Label */}
             <header className="fixed top-8 left-8 z-50 mix-blend-difference hidden md:block">
                 <h1 className="font-mono text-xs text-white uppercase tracking-[0.5em] font-black">
-                    LINKBOARD / PORTFOLIO v.26
+                    PORTFOLIO v.26
                 </h1>
             </header>
 

@@ -4,6 +4,17 @@ import { Project, GalleryItem, ExperienceItem } from './types';
 export const PROJECTS: Project[] = [
   {
     id: '1',
+    title: "City of Code",
+    category: "Web App",
+    description: "Generate a 3D city based on the codebase.",
+    link: "#",
+    liveLink: "https://city-of-code.vercel.app/",
+    githubLink: "https://github.com/Tanay-77/city-of-code",
+    techStack: ["Next.js", "Express.js","Three.js"],
+    image: "https://picsum.photos/seed/mcd/600/400"
+  },
+  {
+    id: '2',
     title: "DevBuilder",
     category: "EdTech SaaS",
     description: "A project based learning platform for students.",
@@ -14,7 +25,7 @@ export const PROJECTS: Project[] = [
     image: "https://picsum.photos/seed/mcd/600/400"
   },
   {
-    id: '2',
+    id: '3',
     title: "Rate My Team",
     category: "Web App",
     description: "A platform for rating and reviewing teams.",
@@ -25,7 +36,7 @@ export const PROJECTS: Project[] = [
     image: "https://picsum.photos/seed/spotify/600/400"
   },
   {
-    id: '3',
+    id: '4',
     title: "Bird",
     category: "Landing Page",
     description: "A landing page for a venture capital firm.",
@@ -36,7 +47,7 @@ export const PROJECTS: Project[] = [
     image: "https://picsum.photos/seed/ai/600/400"
   },
   {
-    id: '4',
+    id: '5',
     title: "Noten",
     category: "Landing Page",
     description: "A landing page for a web3 and nft fashion brand.",
@@ -47,24 +58,13 @@ export const PROJECTS: Project[] = [
     image: "https://picsum.photos/seed/dev/600/400"
   },
   {
-    id: '5',
+    id: '6',
     title: "ISRO Website Redesign",
     category: "Landing Page",
     description: "A Redesigned landing page for ISRO.",
     link: "#",
     liveLink: "https://isro-redesignedd.vercel.app/",
     githubLink: "https://github.com/Tanay-77/ISRO",
-    techStack: ["React", "Tailwind", "GSAP"],
-    image: "https://picsum.photos/seed/dev/600/400"
-  },
-  {
-    id: '6',
-    title: "Valorant ",
-    category: "Landing Page",
-    description: "A landing page for a Valorant.",
-    link: "#",
-    liveLink: "https://valorant-inspired.netlify.app/",
-    githubLink: "https://github.com/Tanay-77/valorant-inspired",
     techStack: ["React", "Tailwind", "GSAP"],
     image: "https://picsum.photos/seed/dev/600/400"
   }

@@ -6,7 +6,7 @@ export const PROJECTS: Project[] = [
     id: '1',
     title: "City of Code",
     category: "Web App",
-    description: "Generate a 3D city based on the codebase.",
+    description: "Generates a 3D city based on the codebase.",
     link: "#",
     liveLink: "https://city-of-code.vercel.app/",
     githubLink: "https://github.com/Tanay-77/city-of-code",

@@ -2,6 +2,7 @@
 import React from 'react';
 import Paperclip from './Paperclip';
 import Tape from './Tape';
+import InteractiveText from './InteractiveText';
 
 const Hero: React.FC = () => {
   return (
@@ -10,14 +11,15 @@ const Hero: React.FC = () => {
         <div className="flex-1 space-y-6">
           <div className="space-y-1">
             <span className="font-mono text-xs text-gray-400 block tracking-widest">NAME:</span>
-            <h1 className="text-4xl sm:text-6xl md:text-8xl font-black text-black leading-none uppercase tracking-tighter">
-              Tanay <br /> Mahajan
+            <h1 className="flex flex-col text-4xl sm:text-6xl md:text-8xl font-black text-black leading-none uppercase tracking-tighter relative z-10">
+              <span><InteractiveText text="Tanay" /></span>
+              <span><InteractiveText text="Mahajan" /></span>
             </h1>
           </div>
 
           <div className="space-y-4">
-            <h2 className="text-xl md:text-2xl font-bold text-gray-800 tracking-tight">
-              Developer & Designer
+            <h2 className="text-xl md:text-2xl font-bold text-gray-800 tracking-tight flex gap-2">
+              <InteractiveText text="Developer & Designer" />
             </h2>
             <p className="max-w-md text-gray-600 leading-relaxed font-medium">
               Hey, I'm Tanay Mahajan, a web developer based in Pune, India. I love creating web experiences that feel smooth, thoughtful, and genuinely helpful. Feel free to explore my portfolio and reach out - I'd love to connect!

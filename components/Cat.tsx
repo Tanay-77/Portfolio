@@ -17,19 +17,54 @@ export default function Cat({ parentRef }: { parentRef?: React.RefObject<HTMLEle
 
   const [state, setState] = useState<CatState>('idle');
   const [isHovered, setIsHovered] = useState(false);
+  const [hasInteracted, setHasInteracted] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      audioRef.current = new Audio('/cat_sound.wav');
+      const audio = new Audio('/cat_sound.wav');
+      audio.volume = 1.0;
+      audioRef.current = audio;
+      
+      const unlockAudio = () => {
+        setHasInteracted(true);
+        // browsers require .play() to be called *directly* inside a user interaction event to unlock the specific audio object
+        audio.play().then(() => {
+          audio.pause();
+          audio.currentTime = 0;
+        }).catch(() => {
+          // ignore, this just means it was already unlocked or empty
+        });
+
+        window.removeEventListener('click', unlockAudio);
+        window.removeEventListener('keydown', unlockAudio);
+        window.removeEventListener('touchstart', unlockAudio);
+      };
+      
+      window.addEventListener('click', unlockAudio);
+      window.addEventListener('keydown', unlockAudio);
+      window.addEventListener('touchstart', unlockAudio);
+      
+      return () => {
+        window.removeEventListener('click', unlockAudio);
+        window.removeEventListener('keydown', unlockAudio);
+        window.removeEventListener('touchstart', unlockAudio);
+      };
     }
   }, []);
 
+  const lastPlayedRef = useRef(0);
+
   const handleMouseEnter = () => {
     setIsHovered(true);
-    if (audioRef.current) {
+    const now = Date.now();
+    
+    if (audioRef.current && hasInteracted && now - lastPlayedRef.current > 1000) {
       audioRef.current.currentTime = 0;
-      audioRef.current.play().catch(e => console.error("Audio playback failed:", e));
+      audioRef.current.play().catch((err) => {
+        console.error("Audio playback still failed:", err);
+      });
+      lastPlayedRef.current = now;
     }
   };
 

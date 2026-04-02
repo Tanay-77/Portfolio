@@ -1,12 +1,15 @@
 
-import React from 'react';
+import React, { useRef } from 'react';
 import Paperclip from './Paperclip';
 import Tape from './Tape';
 import InteractiveText from './InteractiveText';
+import Cat from './Cat';
 
 const Hero: React.FC = () => {
+  const containerRef = useRef<HTMLElement>(null);
   return (
-    <section className="relative px-8 pt-16 pb-12 border-b border-gray-200">
+    <section className="relative px-8 pt-16 pb-12 border-b border-gray-200" ref={containerRef}>
+      <Cat parentRef={containerRef} />
       <div className="flex flex-col md:flex-row items-start justify-between gap-12">
         <div className="flex-1 space-y-6">
           <div className="space-y-1">

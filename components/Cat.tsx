@@ -1,11 +1,11 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion, useSpring, useMotionValue } from 'motion/react';
 
 type CatState = 'idle' | 'walking' | 'sitting' | 'jumping';
 
-export default function Cat() {
+export default function Cat({ parentRef }: { parentRef?: React.RefObject<HTMLElement | null> }) {
   const catX = useMotionValue(0);
   const catY = useMotionValue(0);
   const catRotation = useMotionValue(0);
@@ -33,6 +33,7 @@ export default function Cat() {
     }
   };
 
+  const internalContainerRef = useRef<HTMLDivElement>(null);
   const cursor = useRef({ x: 0, y: 0 });
   const current = useRef({ x: 0, y: 0 });
   const target = useRef({ x: 0, y: 0 });
@@ -46,14 +47,32 @@ export default function Cat() {
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
-    cursor.current = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
-    current.current = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
-    target.current = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+    // Use passed parentRef or fallback to internal parent element
+    const parent = parentRef?.current || internalContainerRef.current?.parentElement;
+    if (!parent) return;
+
+    const startRect = parent.getBoundingClientRect();
+    const startX = startRect.width / 2;
+    const startY = startRect.height / 2;
+
+    cursor.current = { x: startX, y: startY };
+    current.current = { x: startX, y: startY };
+    target.current = { x: startX, y: startY };
     catX.set(current.current.x);
     catY.set(current.current.y);
+    
+    console.log("Cat Initialized: ", { startX, startY, parentRect: startRect });
 
     const handleMouseMove = (e: MouseEvent) => {
-      cursor.current = { x: e.clientX, y: e.clientY };
+      const parentRect = parent.getBoundingClientRect();
+      const rawX = e.clientX - parentRect.left;
+      const rawY = e.clientY - parentRect.top;
+      
+      // Clamp coordinates so the cat stays within the bounds of the section
+      cursor.current = { 
+        x: Math.max(32, Math.min(rawX, parentRect.width - 32)), 
+        y: Math.max(32, Math.min(rawY, parentRect.height - 32)) 
+      };
     };
 
     window.addEventListener('mousemove', handleMouseMove);
@@ -144,9 +163,14 @@ export default function Cat() {
       catX.set(current.current.x);
       catY.set(current.current.y);
 
+      // Calculate the viewport-relative position of the cat for the 'cat-move' event
+      const parentRect = parent.getBoundingClientRect();
+      const viewportX = parentRect.left + current.current.x;
+      const viewportY = parentRect.top + current.current.y;
+
       // Dispatch event for text interaction
       window.dispatchEvent(new CustomEvent('cat-move', {
-        detail: { x: current.current.x, y: current.current.y, state: stateData.current.type }
+        detail: { x: viewportX, y: viewportY, state: stateData.current.type }
       }));
 
       animationFrameId = requestAnimationFrame(update);
@@ -162,12 +186,13 @@ export default function Cat() {
 
   return (
     <motion.div
+      ref={internalContainerRef}
       style={{
         x: smoothX,
         y: smoothY,
         rotate: smoothRotation,
         scaleX: catScaleX,
-        position: 'fixed',
+        position: 'absolute',
         top: -32,
         left: -32,
         width: 64,

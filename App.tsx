@@ -1,5 +1,4 @@
 import React from 'react';
-import Cat from './components/Cat';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import GalleryPage from './pages/GalleryPage';
@@ -7,7 +6,6 @@ import GalleryPage from './pages/GalleryPage';
 const App: React.FC = () => {
   return (
     <BrowserRouter>
-      <Cat />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/gallery" element={<GalleryPage />} />

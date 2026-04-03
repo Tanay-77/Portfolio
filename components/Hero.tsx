@@ -25,7 +25,8 @@ const Hero: React.FC = () => {
               <InteractiveText text="Developer & Designer" />
             </h2>
             <p className="max-w-md text-gray-600 leading-relaxed font-medium">
-              Hey, I'm Tanay Mahajan, a web developer based in Pune, India. I love creating web experiences that feel smooth, thoughtful, and genuinely helpful. Feel free to explore my portfolio and reach out - I'd love to connect!
+              <InteractiveText text="Hey, I'm Tanay Mahajan, a web developer based in Pune, India. I love creating web experiences that feel smooth, thoughtful, and genuinely helpful. Feel free to explore my portfolio and reach out - I'd love to connect!" />
+
             </p>
           </div>
 

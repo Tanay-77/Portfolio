@@ -1,4 +1,4 @@
-
+'use client';
 
 import { useEffect, useRef } from 'react';
 import { motion, useAnimation } from 'motion/react';
@@ -48,18 +48,18 @@ function Word({ word }: { word: string }) {
       const dy = wordY - catY;
       const dist = Math.hypot(dx, dy);
 
-      const maxDist = 100; // interaction radius
+      const maxDist = 70; // interaction radius reduced
 
       if (dist < maxDist) {
-        // Push away gracefully
+        // Push away gracefully but subtly
         const force = Math.pow((maxDist - dist) / maxDist, 2); // non-linear force
-        const pushX = (dx / dist) * force * 30; // max 30px push
-        const pushY = (dy / dist) * force * 30;
-        const rotate = (dx / dist) * force * 20; // max 20deg rotation
+        const pushX = (dx / dist) * force * 10; // max 10px push (was 30)
+        const pushY = (dy / dist) * force * 10;
+        const rotate = (dx / dist) * force * 5; // max 5deg rotation (was 20)
 
         // If sitting, hide or squish slightly
-        const scale = state === 'sitting' && dist < 60 ? 0.9 : 1;
-        const opacity = state === 'sitting' && dist < 60 ? 0.4 : 1;
+        const scale = state === 'sitting' && dist < 50 ? 0.95 : 1;
+        const opacity = state === 'sitting' && dist < 50 ? 0.7 : 1;
 
         controls.start({
           x: pushX,

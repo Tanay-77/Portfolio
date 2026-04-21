@@ -32,7 +32,7 @@ export const PROJECTS: Project[] = [
     link: "#",
     liveLink: "https://hrpreneurss.vercel.app/",
     githubLink: "https://github.com/Tanay-77/HRpreneurs",
-    techStack: ["React", "TypeScript", "Node.js", "Tailwind"],
+    techStack: ["Next.js", "TypeScript", "Tailwind"],
     image: "https://picsum.photos/seed/spotify/600/400"
   },
   {

@@ -26,8 +26,8 @@ export const PROJECTS: Project[] = [
   },
   {
     id: '3',
-    title: "Hr-prenuer",
-    category: "Landig Page",
+    title: "Hr-Prenuer",
+    category: "Landing Page",
     description: "A platform for a consulting firm",
     link: "#",
     liveLink: "https://hrpreneurss.vercel.app/",

@@ -26,7 +26,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: '3',
-    title: "Hrprenuer",
+    title: "Hr-prenuer",
     category: "Landig Page",
     description: "A platform for a consulting firm",
     link: "#",

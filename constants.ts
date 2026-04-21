@@ -28,7 +28,7 @@ export const PROJECTS: Project[] = [
     id: '3',
     title: "Hr-Prenuer",
     category: "Landing Page",
-    description: "A platform for a consulting firm",
+    description: "A landing page for a consulting firm",
     link: "#",
     liveLink: "https://hrpreneurss.vercel.app/",
     githubLink: "https://github.com/Tanay-77/HRpreneurs",

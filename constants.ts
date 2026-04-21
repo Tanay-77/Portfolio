@@ -10,7 +10,7 @@ export const PROJECTS: Project[] = [
     link: "#",
     liveLink: "https://city-of-code.vercel.app/",
     githubLink: "https://github.com/Tanay-77/city-of-code",
-    techStack: ["Next.js", "Express.js","Three.js"],
+    techStack: ["Next.js", "Express.js", "Three.js"],
     image: "https://picsum.photos/seed/mcd/600/400"
   },
   {
@@ -26,12 +26,12 @@ export const PROJECTS: Project[] = [
   },
   {
     id: '3',
-    title: "Rate My Team",
-    category: "Web App",
-    description: "A platform for rating and reviewing teams.",
+    title: "Hrprenuer",
+    category: "Landig Page",
+    description: "A platform for a consulting firm",
     link: "#",
-    liveLink: "https://ratemyteam.netlify.app/",
-    githubLink: "https://github.com/Tanay-77/Team-Ratings",
+    liveLink: "https://hrpreneurss.vercel.app/",
+    githubLink: "https://github.com/Tanay-77/HRpreneurs",
     techStack: ["React", "TypeScript", "Node.js", "Tailwind"],
     image: "https://picsum.photos/seed/spotify/600/400"
   },
@@ -43,7 +43,7 @@ export const PROJECTS: Project[] = [
     link: "#",
     liveLink: "https://bird-venture-capital.netlify.app/",
     githubLink: "https://github.com/Tanay-77/bird-venture-capital",
-    techStack: ["React", "TypeScript", "Tailwind"],
+    techStack: ["Next.js", "TypeScript", "Tailwind"],
     image: "https://picsum.photos/seed/ai/600/400"
   },
   {

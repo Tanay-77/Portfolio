@@ -37,6 +37,17 @@ export const PROJECTS: Project[] = [
   },
   {
     id: '4',
+    title: "Devpilot",
+    category: "Landing Page",
+    description: "A landing page for a SaaS product.",
+    link: "#",
+    liveLink: "https://devpilott.netlify.app/",
+    githubLink: "https://github.com/Tanay-77/devpilot",
+    techStack: ["Next.js", "TypeScript", "Tailwind"],
+    image: "https://picsum.photos/seed/ai/600/400"
+  },
+  {
+    id: '5',
     title: "Bird",
     category: "Landing Page",
     description: "A landing page for a venture capital firm.",
@@ -47,7 +58,7 @@ export const PROJECTS: Project[] = [
     image: "https://picsum.photos/seed/ai/600/400"
   },
   {
-    id: '5',
+    id: '6',
     title: "Noten",
     category: "Landing Page",
     description: "A landing page for a web3 and nft fashion brand.",
@@ -57,17 +68,7 @@ export const PROJECTS: Project[] = [
     techStack: ["React", "TypeScript", "Tailwind"],
     image: "https://picsum.photos/seed/dev/600/400"
   },
-  {
-    id: '6',
-    title: "ISRO Website Redesign",
-    category: "Landing Page",
-    description: "A Redesigned landing page for ISRO.",
-    link: "#",
-    liveLink: "https://isro-redesignedd.vercel.app/",
-    githubLink: "https://github.com/Tanay-77/ISRO",
-    techStack: ["React", "Tailwind", "GSAP"],
-    image: "https://picsum.photos/seed/dev/600/400"
-  }
+ 
 ];
 
 export const EXPERIENCE: ExperienceItem[] = [
